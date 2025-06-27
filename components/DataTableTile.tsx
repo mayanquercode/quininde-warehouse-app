@@ -37,9 +37,13 @@ const Item = ({ tile }: ItemProps) => {
   )
 }
 
-function DataTableTile() {
+type DataTableTileProps = {
+  data: Tile[]
+}
 
-  const { data } = useGetAllTiles();
+function DataTableTile({data}: DataTableTileProps) {
+
+//  const { data } = useGetAllTiles();
 
   return (
     <ScrollView style={{}}>
