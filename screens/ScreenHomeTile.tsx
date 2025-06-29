@@ -2,7 +2,7 @@
 import DataTableTile from "@/components/DataTableTile";
 import { router, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, TouchableOpacity, View, ActivityIndicator } from "react-native";
+import { StyleSheet, TouchableOpacity, View, ActivityIndicator, Text } from "react-native";
 import { FAB, TextInput, MD3Colors } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useState, useMemo } from "react";
@@ -18,7 +18,7 @@ function ScreenHomeTile() {
     if (!search.trim()) return allTiles;
 
     const searchTerm = search.toLowerCase();
-    return allTiles.filter(tile => 
+    return allTiles.filter(tile =>
       tile.name.toLowerCase().includes(searchTerm) ||
       (tile.code && tile.code.toLowerCase().includes(searchTerm))
     );
@@ -31,7 +31,7 @@ function ScreenHomeTile() {
   return (
     <View style={s.screen}>
       <Stack.Screen options={{ title: "Cerámicas" }} />
-      
+
       {/* Barra de búsqueda */}
       <View style={s.searchContainer}>
         <TextInput
@@ -43,9 +43,9 @@ function ScreenHomeTile() {
           left={<TextInput.Icon icon="magnify" />}
           right={
             search ? (
-              <TextInput.Icon 
-                icon="close" 
-                onPress={handleClearSearch} 
+              <TextInput.Icon
+                icon="close"
+                onPress={handleClearSearch}
               />
             ) : null
           }

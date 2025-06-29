@@ -11,7 +11,7 @@ import useDeleteTile from '@/tiles/hooks/useDeleteTile';
 function ScreenEditTile() {
   // get the code from the query params
   const { code } = useLocalSearchParams();
-  const { data } = useGetTile(code as string)
+  const { data, isLoading } = useGetTile(code as string)
   // Hook para remove ceramic tile
   const { mutate: deleteTile } = useDeleteTile()
 
@@ -43,9 +43,9 @@ function ScreenEditTile() {
       setFormData({
         code: data.code,
         name: data.name,
-        box: data.box,
-        piece: data.piece,
-        pieces: data.pieces
+        box: data.box?.toString() ?? '',
+        piece: data.piece?.toString() ?? '',
+        pieces: data.pieces?.toString() ?? '',
       });
     }
   }, [data]);

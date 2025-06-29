@@ -14,14 +14,17 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.mayanquerhugo.quinindewarehouseapp",
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
@@ -33,6 +36,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ee33bf48-d096-4cd9-bfa0-e4312f151fab"
+      }
+    },
+    "owner": "mayanquerhugo"
   }
 }
