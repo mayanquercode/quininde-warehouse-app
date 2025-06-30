@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { tileRepository } from "../dependencies";
+import { fetchTileByCode } from '../api/tileService';
 
 export default function useGetTile(code: string) {
 
   return useQuery({
     queryKey: ['tiles', code],
-    queryFn: () => tileRepository.getTileByCode(code),
+    queryFn: () => fetchTileByCode(code),
   });
 }

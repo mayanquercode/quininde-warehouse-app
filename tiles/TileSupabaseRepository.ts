@@ -1,7 +1,7 @@
 import { Tile, TileFormData, TileRepository } from "./entities";
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
+export const supabase = createClient(
   process.env.EXPO_PUBLIC_SUPABASE_URL as string,
   process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY as string
 );

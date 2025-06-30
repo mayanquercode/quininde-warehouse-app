@@ -1,8 +1,8 @@
-import ScreenHomeTile from "@/screens/ScreenHomeTile";
+import ScreenHomeTiles from "@/tiles/screens/ScreenHomeTiles";
 
 function Home() {
   return (
-    <ScreenHomeTile />
+    <ScreenHomeTiles />
   );
 }
 
